@@ -1,0 +1,91 @@
+---
+:custom_buttons_sets:
+- name: Rubrik|Vm|
+  description: Rubrik Services
+  set_type: CustomButtonSet
+  read_only: 
+  mode: 
+  custom_buttons:
+  - description: Modify SLA Domain
+    applies_to_class: Vm
+    applies_to_exp: 
+    options:
+      :button_image: '3'
+      :display: true
+      :open_url: false
+      :display_for: single
+      :submit_how: one
+    userid: admin
+    wait_for_complete: 
+    name: Modify SLA Domain
+    visibility:
+      :roles:
+      - _ALL_
+    applies_to_id: 
+    resource_actions:
+      action: 
+      ae_namespace: SYSTEM
+      ae_class: PROCESS
+      ae_instance: Request
+      ae_message: 
+      ae_attributes:
+        request: UpdateVmwareVmSlaDomain
+      dialog_label: Rubrik - Select SLA Domain
+  - description: Request a Live Mount
+    applies_to_class: Vm
+    applies_to_exp: 
+    options:
+      :button_image: '5'
+      :display: true
+      :open_url: false
+      :display_for: single
+      :submit_how: one
+    userid: admin
+    wait_for_complete: 
+    name: Request a Live Mount
+    visibility:
+      :roles:
+      - _ALL_
+    applies_to_id: 
+    resource_actions:
+      action: 
+      ae_namespace: SYSTEM
+      ae_class: PROCESS
+      ae_instance: Request
+      ae_message: 
+      ae_attributes:
+        request: RequestLiveMount
+      dialog_label: Rubrik - Live Mount
+  - description: Take On-Demand Snapshot
+    applies_to_class: Vm
+    applies_to_exp: 
+    options:
+      :button_image: 8
+      :display: true
+      :open_url: false
+      :display_for: single
+      :submit_how: one
+    userid: admin
+    wait_for_complete: 
+    name: Take On-Demand Snapshot
+    visibility:
+      :roles:
+      - _ALL_
+    applies_to_id: 
+    resource_actions:
+      action: 
+      ae_namespace: SYSTEM
+      ae_class: PROCESS
+      ae_instance: Request
+      ae_message: 
+      ae_attributes:
+        request: CreateOnDemandSnapshot
+      dialog_label: Rubrik - On-Demand Snapshot
+  set_data:
+    :button_order:
+    - Modify SLA Domain
+    - Take On-Demand Snapshot
+    - Request a Live Mount
+    :button_image: 4
+    :display: true
+    :group_index: 1

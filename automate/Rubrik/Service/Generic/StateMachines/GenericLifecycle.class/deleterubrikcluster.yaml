@@ -1,0 +1,44 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: DeleteRubrikCluster
+    inherits: 
+    description: 
+  fields:
+  - start:
+      on_entry: update_status(status => 'Processing Start')
+      on_exit: update_status(status => 'Processed Start')
+      on_error: update_status(status => 'Error Processing Start')
+  - pre4:
+      on_entry: update_status(status => 'Processing Preprocess')
+      on_exit: update_status(status => 'Processed Preprocess')
+      on_error: update_status(status => 'Error Processing Preprocess')
+  - execute:
+      value: METHOD::delete_rubrik_cluster
+      on_entry: update_status(status => 'Starting execute')
+      on_exit: update_status(status => 'Ending execute')
+      on_error: update_status(status => 'Error Processing execute')
+  - check_completed:
+      on_exit: update_status(status => 'Processed check_completed')
+      on_error: update_status(status => 'Error Processing check_completed')
+  - refresh:
+      on_entry: update_status(status => 'Processing refresh')
+      on_exit: update_status(status => 'Processed refresh')
+      on_error: update_status(status => 'Error Processing refresh')
+  - check_refreshed:
+      on_exit: update_status(status => 'Processed check_refreshed')
+      on_error: update_status(status => 'Error Processing check_refreshed')
+  - post0:
+      on_entry: update_status(status => 'Processing Postprocess')
+      on_exit: update_status(status => 'Processed Postprocess')
+      on_error: update_status(status => 'Error Processing Postprocess')
+  - email:
+      value: "/Service/Provisioning/Email/ServiceProvision_complete?event=service_provisioned"
+      on_entry: update_status(status => 'Emailing Owner')
+      on_exit: update_status(status => 'Emailed Owner')
+      on_error: update_status(status => 'Error Emailing Owner')
+  - finish:
+      value: METHOD::delete_service

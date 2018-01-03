@@ -1,0 +1,134 @@
+---
+- description: 
+  buttons: submit,cancel
+  label: Rubrik - On-Demand Snapshot
+  blueprint_id: 
+  dialog_tabs:
+  - description: 
+    display: edit
+    label: On-Demand Snapshot
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: 
+      display: edit
+      label: SLA Domain
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: use_existing_sla
+        description: 
+        type: DialogFieldCheckBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: t
+        values: 
+        values_method: 
+        values_method_options: {}
+        options: {}
+        label: Use Configured SLA Domain?
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: 
+          ae_class: 
+          ae_instance: 
+          ae_message: 
+          ae_attributes: {}
+      - name: select_rubrik_site
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: Select Rubrik Site (only used if 'Use Configured SLA Domain' box is
+          unchecked)
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: true
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: System
+          ae_class: Request
+          ae_instance: QueryConfiguredClusters
+          ae_message: 
+          ae_attributes: {}
+      - name: sla_domain_name
+        description: ''
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: SLA Domain Name (only used if 'Use Configured SLA Domain' box is unchecked)
+        position: 2
+        validator_type: 
+        validator_rule: 
+        reconfigurable: false
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Workflows
+          ae_class: SlaDomains
+          ae_instance: DropDown_QuerySlaDomains
+          ae_message: 
+          ae_attributes: {}

@@ -1,0 +1,95 @@
+---
+- description: 
+  buttons: submit,cancel
+  label: Rubrik - Live Mount
+  blueprint_id: 
+  dialog_tabs:
+  - description: 
+    display: edit
+    label: Live Mount
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: 
+      display: edit
+      label: Snapshot Details
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: snapshot
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: Snapshot
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: false
+        load_values_on_init: false
+        read_only: false
+        auto_refresh: false
+        trigger_auto_refresh: false
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Workflows
+          ae_class: VmwareVmOperations
+          ae_instance: DropDown_ListVmwareVmSnapshot
+          ae_message: 
+          ae_attributes: {}
+      - name: remove_network_devices
+        description: 
+        type: DialogFieldCheckBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: f
+        values: 
+        values_method: 
+        values_method_options: {}
+        options: {}
+        label: Remove Network Devices
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: 
+          ae_class: 
+          ae_instance: 
+          ae_message: 
+          ae_attributes: {}

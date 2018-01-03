@@ -1,0 +1,96 @@
+---
+- description: 
+  buttons: submit,cancel
+  label: Rubrik - Select SLA Domain
+  blueprint_id: 
+  dialog_tabs:
+  - description: 
+    display: edit
+    label: SLA Domain
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: 
+      display: edit
+      label: SLA Domain
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: select_rubrik_site
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: 'Select Rubrik Site:'
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: true
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: System
+          ae_class: Request
+          ae_instance: QueryConfiguredClusters
+          ae_message: 
+          ae_attributes: {}
+      - name: sla_domain_list
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: 'Select SLA Domain:'
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: false
+        load_values_on_init: true
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: true
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Workflows
+          ae_class: SlaDomains
+          ae_instance: DropDown_QuerySlaDomains
+          ae_message: 
+          ae_attributes: {}

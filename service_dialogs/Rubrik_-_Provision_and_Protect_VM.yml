@@ -1,0 +1,179 @@
+---
+- description: 
+  buttons: submit,cancel
+  label: Rubrik - Provision and Protect VM
+  blueprint_id: 
+  dialog_tabs:
+  - description: 
+    display: edit
+    label: Provision and Protect VM
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: 
+      display: edit
+      label: VM Details
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: src_vm_id_a
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: VM Template
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: false
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: 
+        visible: false
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Integration/VMware
+          ae_class: DynamicDropDowns
+          ae_instance: ListVmwareTemplates
+          ae_message: 
+          ae_attributes: {}
+      - name: vm_name
+        description: 
+        type: DialogFieldTextBox
+        data_type: string
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: ''
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: VM Name
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: 
+          ae_class: 
+          ae_instance: 
+          ae_message: 
+          ae_attributes: {}
+    - description: 
+      display: edit
+      label: Protection Details
+      display_method: 
+      display_method_options: 
+      position: 1
+      dialog_fields:
+      - name: select_rubrik_site
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: Rubrik Site
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: false
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: true
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: System
+          ae_class: Request
+          ae_instance: QueryConfiguredClusters
+          ae_message: 
+          ae_attributes: {}
+      - name: sla_domain_list
+        description: 
+        type: DialogFieldDropDownList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :force_multi_value: false
+        label: Rubrik SLA Domain
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: true
+        trigger_auto_refresh: false
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Workflows
+          ae_class: SlaDomains
+          ae_instance: DropDown_QuerySlaDomains
+          ae_message: 
+          ae_attributes: {}

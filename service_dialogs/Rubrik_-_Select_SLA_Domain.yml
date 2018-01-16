@@ -18,6 +18,82 @@
       display_method_options: 
       position: 0
       dialog_fields:
+      - name: current_site_label
+        description: 
+        type: DialogFieldTextBox
+        data_type: string
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: ''
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: 'Current Rubrik Site:'
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: true
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Integration/VMware
+          ae_class: DynamicLabels
+          ae_instance: GetCurrentRubrikSite
+          ae_message: 
+          ae_attributes: {}
+      - name: current_sla_label
+        description: 
+        type: DialogFieldTextBox
+        data_type: string
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: ''
+        values: []
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: 'Current SLA Domain:'
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: 
+        load_values_on_init: 
+        read_only: true
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Integration/VMware
+          ae_class: DynamicLabels
+          ae_instance: GetCurrentRubrikSla
+          ae_message: 
+          ae_attributes: {}
       - name: select_rubrik_site
         description: 
         type: DialogFieldDropDownList
@@ -36,8 +112,8 @@
         values_method_options: {}
         options:
           :force_multi_value: false
-        label: 'Select Rubrik Site:'
-        position: 0
+        label: 'Select New Rubrik Site:'
+        position: 2
         validator_type: 
         validator_rule: 
         reconfigurable: 
@@ -74,8 +150,8 @@
         values_method_options: {}
         options:
           :force_multi_value: false
-        label: 'Select SLA Domain:'
-        position: 1
+        label: 'Select New SLA Domain:'
+        position: 3
         validator_type: 
         validator_rule: 
         reconfigurable: 

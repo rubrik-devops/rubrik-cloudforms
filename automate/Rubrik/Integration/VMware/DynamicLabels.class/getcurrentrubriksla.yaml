@@ -1,0 +1,12 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: GetCurrentRubrikSla
+    inherits: 
+    description: 
+  fields:
+  - execute:
+      value: get_current_rubrik_sla

@@ -60,10 +60,10 @@ end
 dialog_field = $evm.object
 
 # sort_by: value / description / none
-dialog_field["sort_by"] = "value"
+dialog_field["sort_by"] = "description"
 
 # sort_order: ascending / descending
-dialog_field["sort_order"] = "ascending"
+dialog_field["sort_order"] = "descending"
 
 # data_type: string / integer
 dialog_field["data_type"] = "string"

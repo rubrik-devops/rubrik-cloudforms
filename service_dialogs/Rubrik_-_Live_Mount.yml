@@ -65,7 +65,7 @@
         display: edit
         display_method: 
         display_method_options: {}
-        required: true
+        required: false
         required_method: 
         required_method_options: {}
         default_value: f

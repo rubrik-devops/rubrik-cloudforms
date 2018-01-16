@@ -11,6 +11,7 @@ else
   $evm.log('info',"Instance not created.")
 end
 
-$evm.root['service'].retire_now
+# commenting out, see https://github.com/rubrik-devops/rubrik-cloudforms/issues/2
+#$evm.root['service'].retire_now
 
 exit MIQ_OK

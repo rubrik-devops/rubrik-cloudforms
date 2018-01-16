@@ -15,7 +15,7 @@
       service_template_catalog_name: Rubrik
       resource_actions:
       - action: Provision
-        ae_namespace: Service/Generic/StateMachines
+        ae_namespace: Rubrik/Service/Generic/StateMachines
         ae_class: GenericLifecycle
         ae_instance: AddRubrikCluster
         ae_message: 
@@ -36,7 +36,7 @@
       service_template_catalog_name: Rubrik
       resource_actions:
       - action: Provision
-        ae_namespace: Service/Generic/StateMachines
+        ae_namespace: Rubrik/Service/Generic/StateMachines
         ae_class: GenericLifecycle
         ae_instance: DeleteRubrikCluster
         ae_message: 

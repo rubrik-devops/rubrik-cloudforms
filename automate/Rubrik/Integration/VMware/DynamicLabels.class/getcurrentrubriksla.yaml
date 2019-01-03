@@ -4,9 +4,9 @@ version: 1.0
 object:
   attributes:
     display_name: 
-    name: ListVmwareTemplates
+    name: GetCurrentRubrikSla
     inherits: 
     description: 
   fields:
   - execute:
-      value: list_vmware_templates
+      value: get_current_rubrik_sla

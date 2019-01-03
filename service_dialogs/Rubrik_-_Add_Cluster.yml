@@ -39,7 +39,7 @@
         label: Cluster Name
         position: 0
         validator_type: regex
-        validator_rule: "^[a-zA-Z0-9.-_]+$"
+        validator_rule: "^[a-zA-Z0-9.\\-_]+$"
         reconfigurable: 
         dynamic: false
         show_refresh_button: 
@@ -77,7 +77,7 @@
         label: Hostname or IP
         position: 1
         validator_type: regex
-        validator_rule: "^[a-zA-Z0-9.-_]+$"
+        validator_rule: "^[a-zA-Z0-9.\\-_]+$"
         reconfigurable: 
         dynamic: false
         show_refresh_button: 
@@ -115,7 +115,7 @@
         label: Username
         position: 2
         validator_type: regex
-        validator_rule: "^[a-zA-Z0-9.-_@]+$"
+        validator_rule: "^[a-zA-Z0-9.\\-_@]+$"
         reconfigurable: 
         dynamic: false
         show_refresh_button: 

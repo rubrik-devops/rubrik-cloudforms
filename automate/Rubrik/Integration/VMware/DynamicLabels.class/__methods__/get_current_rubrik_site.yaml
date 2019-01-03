@@ -3,7 +3,7 @@ object_type: method
 version: 1.0
 object:
   attributes:
-    name: code_test
+    name: get_current_rubrik_site
     display_name: 
     description: 
     scope: instance

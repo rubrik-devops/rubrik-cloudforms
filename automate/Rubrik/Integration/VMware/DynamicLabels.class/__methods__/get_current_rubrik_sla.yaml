@@ -3,7 +3,7 @@ object_type: method
 version: 1.0
 object:
   attributes:
-    name: add_new_cluster
+    name: get_current_rubrik_sla
     display_name: 
     description: 
     scope: instance

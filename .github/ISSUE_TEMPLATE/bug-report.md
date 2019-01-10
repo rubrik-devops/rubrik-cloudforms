@@ -19,6 +19,4 @@ assignees: ''
 **Anything else we need to know?**:
 
 **Environment**:
-- SDK version:
-- OS 
-- Others:
+

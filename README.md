@@ -1,7 +1,5 @@
 # Rubrik Management Pack for CloudForms
 
-## Overview
-
 This repository contains the Rubrik Management Pack for CloudForms, which is usable in [Red Hat CloudForms](https://www.redhat.com/en/technologies/management/cloudforms) and [ManageIQ](https://manageiq.org).
 
 This provides integration between the Cloud Management Platform, and the Rubrik platform protecting it; allowing the configuration and management of workloads protected by Rubrik through a single console.
@@ -22,3 +20,8 @@ This pack contains the following buttons added to virtual machines to aid in wor
 * **Request a Live Mount** - uses Rubrik's Live Mount feature to instantly recover a point in time snapshot of the VM to vCenter
 * **Take On-Demand Snapshot** - takes an ad-hoc snapshot, using either the already assigned SLA Domain policy, or a different policy
 
+## Quick Start
+
+* [Quick Start Guide](https://github.com/rubrikinc/rubrik-management-pack-for-cloudforms/blob/master/docs/quick-start.md)
+
+## Additional Links

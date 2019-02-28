@@ -22,7 +22,7 @@ This pack contains the following buttons added to virtual machines to aid in wor
 
 # :blue_book: Documentation 
 
-Here are some resources to get you started! If you find any challenges from this project are not properly documented or are unclear, please [raise an issue](https://github.com/rubrikinc/rubrik-management-pack-for-cloudforms/issues/new/choose) and let us know! This is a fun, safe environment - don't worry if you're a GitHub newbie! :heart:
+Here are some resources to get you started. If you find any challenges from this project are not properly documented or are unclear, please [raise an issue](https://github.com/rubrikinc/rubrik-management-pack-for-cloudforms/issues/new/choose) and let us know! This is a fun, safe environment - don't worry if you're a GitHub newbie! :heart:
 
 * [Quick Start Guide](https://github.com/rubrikinc/rubrik-management-pack-for-cloudforms/blob/master/docs/quick-start.md)
 * [BLOG: Backup-as-a-Service with Rubrik and Red Hat CloudForms](https://www.rubrik.com/blog/backup-as-a-service-rubrik-cloudforms/)
